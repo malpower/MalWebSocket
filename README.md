@@ -1,2 +1,2 @@
 # MalWebSocket
-My Websocket server made by 100% pure javascript.
+My Websocket class made by 100% pure javascript.
