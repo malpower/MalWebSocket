@@ -2,11 +2,6 @@ var net=require("net");
 var crypto=require("crypto");
 var MSocket=require("./MSocket");
 
-var regex=/Sec-WebSocket-Key: [^\r\n]{0,}\r\n/;
-
-
-
-
 
 var server=net.createServer(function(s)
 {
@@ -14,6 +9,9 @@ var server=net.createServer(function(s)
     {
         socket.bindReader(function(msg)
         {
+            console.log(msg.fin);
+            console.log(msg.length);
+            console.log(msg.opCode);
             console.log(msg.content.toString("utf8"));
             socket.write("SDLFJSLDFJLSKDFJSLDKJF");
         });

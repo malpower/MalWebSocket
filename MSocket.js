@@ -104,7 +104,10 @@ function MSocket(oSock,shakeCb)
             }
         }
         msg.content=content;
-        reader(msg);
+        if (msg.opCode!=8)
+        {
+            reader(msg);
+        }
     }
     function GetPayloadLength()
     {
